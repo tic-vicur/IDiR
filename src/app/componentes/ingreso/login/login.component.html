@@ -1,0 +1,56 @@
+
+<div class="wrapper fadeInDown">
+        <div id="formContent">
+          <!-- Tabs Titles -->
+          <h2 class="active">Identificar</h2>
+          <h2 class="inactive underlineHover">Regitrar</h2>
+      
+          <!-- Icon -->
+          <div class="fadeIn first">
+            <img src="../../../../assets/idir/idir-general.svg" id="icon" alt="VICUR" />
+           </div>
+      
+          <!-- Login Form -->
+          <!--
+          <form>
+            <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+            <input type="password" id="password" class="fadeIn third" name="login" placeholder="password">
+            <input type="submit" class="fadeIn fourth" value="Log In" (click)="authService.SignIn(login, password)">
+            <input type="image" src="http://www.setyourowntests.com/_/rsrc/1468869481521/help/accounts/btn_google_signin_dark_normal_web%402x.png" 
+                         width="220" height="50" class="fadeIn fourth" value="GoogleAuth" (click)="authService.GoogleAuth()">
+          </form>
+          -->
+          <div class="authBlock">
+              <h3>Iniciar sesión</h3>
+              <div class="formGroup">
+                <input type="text" class="formControl" placeholder="Usuario" #userName required>
+              </div>
+        
+              <div class="formGroup">
+                <input type="password" class="formControl" placeholder="Contraseña" #userPassword required>
+              </div>
+        
+              <!-- Calling SignIn Api from AuthService -->
+              <div class="formGroup">
+                <input type="button" class="btn btnPrimary" value="Iniciar" (click)="authService.SignIn(userName.value, userPassword.value)">
+              </div>
+              
+              <div class="formGroup">
+                  <span class="or"><span class="orInner">Alternativa</span></span>
+                </div>
+          
+                <!-- Calling GoogleAuth Api from AuthService -->
+                <div class="formGroup">
+                  
+                    <img src="http://www.setyourowntests.com/_/rsrc/1468869481521/help/accounts/btn_google_signin_dark_normal_web%402x.png" 
+                    width="220" height="50"alt="Ingresar con la cuenta de google" (click)="authService.GoogleAuth()">
+                  
+                </div>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+        <a class="underlineHover" href="#">Forgot Password?</a>
+      </div>
+  
+    </div>
+  </div>
